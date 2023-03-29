@@ -1,0 +1,103 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #dbdbdb;
+}
+
+.wrapper{
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.content{
+	height: 200px;
+	width: 350px;
+	background: url('../img/bg-box.png');
+	box-shadow: white 10px 10px 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.title {
+	color: white;
+	font-size: 20px;
+	background: rgba(0, 0, 0,.4);
+	text-align: center;
+	padding: 20px 0;
+	animation-name: title;
+	animation-duration: 10s;
+	animation-fill-mode: forwards;
+	position: absolute;
+	top: -86px;
+	Width: 100%;
+	animation-delay: .5s;
+}
+
+@keyframes title{
+	0% { top: -86px }
+	10% { top: 0px; color: green }
+	25% { top: 0px; color: green }
+	50% { top: 0px; color: white }
+	60% { top: 0px; color: pink }
+	100% { top: 0px; color: pink }
+}
+
+
+.shoe1{
+	background: url('../img/nike1.png');
+	background-size: cover;
+	width: 200px;
+	height: 80px;
+	position: absolute;
+	top: 90px;
+	left: -350px;
+	animation-name: shoe1;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-delay: .5s;
+}
+
+@keyframes shoe1{
+	0% {left: -350px;}
+	20% {left: 75px;}
+	50% {left: 75px;}
+	100% {left: 600px;}
+}
+
+.shoe2{
+	background: url('../img/nike2.png');
+	background-size: cover;
+	Width: 200px;
+	height: 80px;
+	position: absolute;
+	top: 90px;
+	left: -350px;
+	animation-name: shoe2;
+	animation-duration: 5s;
+	animation-delay: 5.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shoe2{
+	0% {left: -350px;}
+	20% {left: 75px;}
+	100% {left: 75px;}
+}
+
+@media screen and (min-width: 576px){
+	.content{
+		transform: scale(1.5);
+	}
+}
+
+@media screen and (min-width: 992px){
+	.content{
+		transform: scale(2);
+	}
+}
